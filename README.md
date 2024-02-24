@@ -1,4 +1,4 @@
-# Tele-Word-Game-in-c-
+# Tele-Word-Game-in-c++
 Search the words combination in an NxN grid
 
 Title: Word Search Game
