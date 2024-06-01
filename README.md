@@ -1,111 +1,81 @@
-# Tele-Word-Game-in-c++
-Search the words combination in an NxN grid
+# Teleword Solver
 
-Title: Word Search Game
+Teleword is a word puzzle designed by David Ouellet that appears in the leisure columns of newspapers around the world, including the daily Dawn in Pakistan. This project aims to solve any Teleword puzzle provided as a text file.
 
-Overview:
-This C++ program implements a word search game. The game consists of a grid of letters, and the player needs to find a list of words hidden within the grid. The words can be oriented horizontally, vertically, or diagonally in both forward and backward directions.
+## How to Play
 
-Files:
+The game consists of a 15x15 grid of letters and a list of words. The goal is to find all the words in the list within the grid. The words can appear forwards or backwards in rows, columns, or diagonals. Once all words are found, the leftover letters (those not part of any word) spell out the Teleword when read row by row.
 
-word_search.cpp: Contains the main program for the word search game.
-tictactoe.cpp: Contains the main program for the Tic Tac Toe game.
-Word Search Game (word_search.cpp):
+## Input Format
 
-Includes:
+The input to the program is a text file named `teleword.txt`. The file format is as follows:
+1. The first 15 lines contain the 15x15 grid of letters, with each letter separated by a comma.
+2. An empty line.
+3. A list of words, each separated by a comma.
 
-<iostream>: Input and output stream handling.
-<fstream>: File stream handling.
-<iomanip>: Manipulators to format output.
-<cstring>: C-style string manipulation.
-<chrono>: Time measurement utilities.
-
-Functions:
-
-printBlankArray Function:
-
-Prints the contents of the blank_array to display the current state after a word is found.
-printTeleWord Function:
+Example:  [teleword.txt]
 
 
-Prints the TELE_WORD, which is the remaining letters after finding words.
-checkHorizontal Function:
+## Program Features
 
+1. **Grid and Word List Display**: The program initially displays the 15x15 grid and the list of words.
+2. **Word Highlighting**: Upon a key press, the next word is highlighted in the grid.
+3. **Finding and Displaying Words**: When all words have been found, the program displays:
+    - A grid with only the letters forming the words.
+    - A grid with the leftover letters.
+    - The Teleword spelled out by the leftover letters.
 
-Checks for the presence of a word horizontally in both forward and backward directions.
-checkVertical Function:
+4. **Statistics**: The program displays the following statistics:
+    - Time to find each word.
+    - Length of each word.
+    - Total time taken to solve the puzzle.
+    - Average word length.
+    - Word distribution (horizontal, vertical, diagonal) with counts of forward and backward words.
+    - Teleword scatter (number of rows touched by Teleword letters).
+    - Heaviest row and heaviest column (most touched by words).
 
+## Usage
 
-Checks for the presence of a word vertically in both upward and downward directions.
-search_word Function:
+1. **Compile the program**:
+    ```sh
+    g++ -o teleword_solver teleword_solver.cpp
+    ```
 
+2. **Run the program**:
+    ```sh
+    ./teleword_solver teleword
+    ```
 
-Searches for a word in the grid horizontally and vertically.
-right_diagonal_up Function:
+    Replace `teleword` with the name of your input file (without the `.txt` extension).
 
+3. **Follow the prompts** to find and highlight each word. 
 
-Searches for a word diagonally from left to right and upwards.
-right_diagonal_down Function:
+## Example Output
 
+The output will display the grids and the Teleword, along with statistics such as time taken to find each word, word length, total time, average word length, word distribution, Teleword scatter, and the heaviest row and column.
 
-Searches for a word diagonally from left to right and downwards.
-left_diagonal_up Function:
+## Requirements
 
+- C++ compiler (e.g., g++)
+- Any additional libraries specified in your `teleword_solver.cpp` file
 
-Searches for a word diagonally from right to left and upwards.
-left_diagonal_down Function:
+## Contributing
 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Searches for a word diagonally from right to left and downwards.
-Main_search Function:
+## License
 
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Main function orchestrating the word search game.
-Reads input file, initializes necessary data structures, and performs the search.
-Displays information about the found words, time taken, and additional statistics.
-main Function:
-Main entry point of the program.
-Accepts command-line arguments for the input file.
-Reads and processes the input file to play the word search game.
-Tic Tac Toe Game (tictactoe.cpp):
+## Contact
 
-Includes:
+AbdulAhad - [linkdin-handle](https://www.linkedin.com/in/abdul-ahad-988305286/) 
 
-<iostream>: Input and output stream handling.
-<iomanip>: Manipulators to format output.
-Functions:
+Email [ahad06074@gmail.com]
 
-printBoard Function:
+Project Link: [https://github.com/AbdulAHAD968/Tele-Word-Game-in-c-/blob/main/main.cpp]
 
-Prints the current state of the Tic Tac Toe board.
-checkWin Function:
-
-
-Checks if a player has won by examining rows, columns, and diagonals.
-isBoardFull Function:
-
-
-Checks if the Tic Tac Toe board is full, resulting in a tie.
-main Function:
-
-
-Main entry point of the program.
-Implements the Tic Tac Toe game with two players taking turns.
-Asks for player names, prints the board, processes player moves, and determines the game outcome.
-
-
-Additional Notes:
-
-Both programs use dynamic memory allocation for character arrays, managed by new and delete operators.
-The word search game provides detailed information about the found words, their positions, and the time taken to search.
-The Tic Tac Toe game allows players to enter their names and continues to prompt for a new game until the user chooses to exit.
-
-
-Usage:
-
-Compile the programs using a C++ compiler (e.g., g++ -o word_search word_search.cpp).
-Run the compiled executable, providing the input file for the word search game (e.g., ./word_search input.txt).
-Follow the on-screen instructions to play the word search game or the Tic Tac Toe game.
-
-
-Note: This documentation is a summary for a better understanding of the code. It's important to ensure that the code works as intended by testing it in the desired environment.
