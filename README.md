@@ -79,14 +79,14 @@ The program reads from a file named `teleword.txt` with the following format:
 
 1. **Compile the Program**:
     ```sh
-    g++ -o teleword_solver teleword_solver.cpp
+    g++ teleword_solver.cpp
     ```
 
 2. **Run the Program**:
     ```sh
-    ./teleword_solver teleword
+    [ ./a.exe ] or [./a.out] teleword.cpp
     ```
-    > Note: Replace `teleword` with your input file name (excluding the `.txt` extension).
+    > Note: Replace `teleword` with your input file name (excluding the `.txt` extension) We have used command line arguments in this code to simulate the scripting process.
 
 3. **Follow Prompts** to locate and highlight each word, view the Teleword, and see the puzzle statistics.
 
