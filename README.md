@@ -1,81 +1,101 @@
 # Teleword Solver
 
-Teleword is a word puzzle designed by David Ouellet that appears in the leisure columns of newspapers around the world, including the daily Dawn in Pakistan. This project aims to solve any Teleword puzzle provided as a text file.
+**Teleword** is a word puzzle designed by David Ouellet and widely featured in newspapers, including Pakistan's *Dawn*. This project is a C++ solution for finding and solving any Teleword puzzle provided as a text file.
 
-## How to Play
+---
 
-The game consists of a 15x15 grid of letters and a list of words. The goal is to find all the words in the list within the grid. The words can appear forwards or backwards in rows, columns, or diagonals. Once all words are found, the leftover letters (those not part of any word) spell out the Teleword when read row by row.
+## 🧩 How to Play
 
-## Input Format
+The puzzle consists of:
+- A **15x15 grid of letters**
+- A **list of hidden words**
 
-The input to the program is a text file named `teleword.txt`. The file format is as follows:
-1. The first 15 lines contain the 15x15 grid of letters, with each letter separated by a comma.
-2. An empty line.
-3. A list of words, each separated by a comma.
+---
 
-Example:  [teleword.txt]
+**Objective**: Locate each word in the list within the grid. Words may appear forwards or backwards across rows, columns, or diagonals. After identifying all words, the leftover letters, read row by row, spell out the *Teleword solution*.
+
+---
+
+## 📥 Input Format
+
+The program reads from a file named `teleword.txt` with the following format:
+1. First 15 lines: The 15x15 grid, with letters separated by commas.
+2. A blank line.
+3. List of words, separated by commas.
+
+---
+
+**Example Format:**
 
 
-## Program Features
+---
 
-1. **Grid and Word List Display**: The program initially displays the 15x15 grid and the list of words.
-2. **Word Highlighting**: Upon a key press, the next word is highlighted in the grid.
-3. **Finding and Displaying Words**: When all words have been found, the program displays:
-    - A grid with only the letters forming the words.
-    - A grid with the leftover letters.
-    - The Teleword spelled out by the leftover letters.
+## 🔍 Program Features
 
-4. **Statistics**: The program displays the following statistics:
-    - Time to find each word.
-    - Length of each word.
-    - Total time taken to solve the puzzle.
-    - Average word length.
-    - Word distribution (horizontal, vertical, diagonal) with counts of forward and backward words.
-    - Teleword scatter (number of rows touched by Teleword letters).
-    - Heaviest row and heaviest column (most touched by words).
+1. **Grid and Word List Display**: Visualizes the initial grid and list of words.
+2. **Word Highlighting**: Highlights each word in sequence upon user input.
+3. **Grid Visualization and Teleword Solution**:
+    - Displays the grid with only the located words.
+    - Shows leftover letters forming the Teleword.
+    - Displays the final Teleword.
+4. **Statistics**:
+    - Time taken to locate each word and overall.
+    - Word length and average word length.
+    - Distribution of word directions (horizontal, vertical, diagonal) with counts for forwards and backwards orientation.
+    - *Teleword Scatter*: Number of rows containing Teleword letters.
+    - *Heaviest Row and Column*: Rows and columns most affected by words.
 
-## Usage
+---
 
-1. **Compile the program**:
+## 🚀 Usage
+
+1. **Compile the Program**:
     ```sh
     g++ -o teleword_solver teleword_solver.cpp
     ```
 
-2. **Run the program**:
+2. **Run the Program**:
     ```sh
     ./teleword_solver teleword
     ```
+    > Note: Replace `teleword` with your input file name (excluding the `.txt` extension).
 
-    Replace `teleword` with the name of your input file (without the `.txt` extension).
+3. **Follow Prompts** to locate and highlight each word, view the Teleword, and see the puzzle statistics.
 
-3. **Follow the prompts** to find and highlight each word. 
+---
 
-## Example Output
+## 📊 Example Output
 
-The output will display the grids and the Teleword, along with statistics such as time taken to find each word, word length, total time, average word length, word distribution, Teleword scatter, and the heaviest row and column.
+Displays the solved grid and Teleword solution, followed by the statistics (word times, lengths, total and average times, direction distribution, Teleword scatter, heaviest row/column).
 
-## Requirements
+---
 
-- C++ compiler (e.g., g++)
-- Any additional libraries specified in your `teleword_solver.cpp` file
+## 📋 Requirements
 
-## Contributing
+- **C++ Compiler** (e.g., g++)
+- **Libraries**: Ensure all additional libraries specified in `teleword_solver.cpp` are available.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+---
 
-## License
+## 🤝 Contributing
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit changes (`git commit -m 'Add AmazingFeature'`).
+4. Push to branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+---
+
+## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
+---
 
-AbdulAhad - [linkdin-handle](https://www.linkedin.com/in/abdul-ahad-988305286/) 
+## 📬 Contact
 
-Email [ahad06074@gmail.com]
-
-Project Link: [https://github.com/AbdulAHAD968/Tele-Word-Game-in-c-/blob/main/main.cpp]
-
+Abdul Ahad  
+**LinkedIn**: [linkedin.com/in/abdul-ahad-988305286](https://www.linkedin.com/in/abdul-ahad-988305286/)  
+**Email**: [ahad06074@gmail.com](mailto:ahad06074@gmail.com)  
+**Project Link**: [Teleword Solver GitHub](https://github.com/AbdulAHAD968/Tele-Word-Game-in-c-/blob/main/main.cpp)  
